@@ -21,14 +21,20 @@
         																														
         */																														
 	var pr = 																													
-	[																													
-	{name: 	'Моё подворье'	,														summ:	500000	,	srok	:	60	,	stavk	:	3	,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'На ремонт'	,															summ:	250000	,	srok	:	36	,	stavk	:	2.83	,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'Праздничный'	,														summ:	100000	,	srok	:	24	,	stavk	:	3.08,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'Обучение в ВУЗе и колледже'	,										summ:	250000	,	srok	:	24	,	stavk	:	3	,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'Отдохни с комфортом'	,												summ:	250000	,	srok	:	24	,	stavk	:	3.08,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'Уютный дом'	,														summ:	250000	,	srok	:	36	,	stavk	:	3.08,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
-	{name: 	'Свадебный'	,															summ:	250000	,	srok	:	36	,	stavk	:	3	,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	[		
+
+	{name: 	'Потребительский'	,													summ:	500000	,	srok	:	60	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Коммерческий',															summ:	6000000	,	srok	:	36	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	0	,	komm	:	''	},
+	{name: 	'Коммерческий (ипотека)',												summ:	6000000	,	srok	:	36	,	stavk	:	3,		vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	0	,	komm	:	''	}
+	
+/*
+	{name: 	'Моё подворье'	,														summ:	500000	,	srok	:	60	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Ремонт'	,															summ:	250000	,	srok	:	36	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Праздничный'	,														summ:	100000	,	srok	:	24	,	stavk	:	3,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Обучение в ВУЗе и колледже'	,										summ:	250000	,	srok	:	24	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Отдохни с комфортом'	,												summ:	250000	,	srok	:	24	,	stavk	:	3,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Уютный дом'	,														summ:	250000	,	srok	:	36	,	stavk	:	3,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
+	{name: 	'Свадебный'	,															summ:	250000	,	srok	:	36	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
 	{name: 	'На лечение и стоматологию'	,											summ:	250000	,	srok	:	36	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
 	{name: 	'Последний звонок  (выдается ежегодно с 01.04. по 30.06.)'	,			summ:	100000	,	srok	:	12	,	stavk	:	2.83,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
 	{name: 	'Ремонтируем авто'	,													summ:	100000	,	srok	:	24	,	stavk	:	3.08,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
@@ -61,7 +67,7 @@
 	//{name: 	'Овощи Дона плюс'	,													summ:	750000	,	srok	:	12	,	stavk	:	3.42,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	0	,	komm	:	''	},
 	//{name: 	'На строительство'	,													summ:	500000	,	srok	:	24	,	stavk	:	3	,	vznos	:	0.5	,	tolko_payshik	:	false	,	type_pogash	:	1	,	komm	:	''	},
 																														
-																														
+*/																													
 																														
 																														
 																														
