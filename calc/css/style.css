@@ -1,0 +1,261 @@
+/* Eric Meyer's CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+body {
+  font-size: 5pt;
+}
+
+#logo {
+  float: left;
+}
+.logotext {
+  text-align: center;
+  font-size: 18pt;
+  padding: 15pt 0;
+}
+.contentleft {
+  width: 45%;
+  /*border:solid;*/
+  overflow: hidden;
+  float: left;
+}
+.contenseparate {
+  float: left;
+  /*	border:solid;*/
+  width: 1%;
+}
+.contentright {
+  float: left;
+  /*	border:solid;*/
+  padding: 0 0 0 10pt;
+  width: 49%;
+}
+/*класс задает ширину формата A4*/
+.widtha4 {
+  width: 550pt;
+}
+#main {
+  /*
+задаем размер бумаги жестко.
+	*/
+  /*
+	А4 без полей
+	
+	width: 550pt;
+	height: 790pt;
+	*/
+
+  width: 505pt;
+  height: 710pt;
+  /*border: medium solid #000;*/
+  margin: 0 0 0 10pt;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11pt;
+}
+#contaner_logo {
+  height: 80pt;
+}
+
+/*таблица платежей*/
+
+.table_payment {
+  font-size: 09pt;
+}
+/*заголовки*/
+.table_payment th {
+  background-color: #09f;
+  border: 1px solid black;
+}
+.table_payment td {
+  text-align: right;
+  border: 1px solid black;
+}
+
+/*таблица взносов*/
+
+.table_vznos {
+  font-size: 10pt;
+}
+/*заголовки*/
+.table_vznos th {
+  background-color: #09f;
+  border: 1px solid black;
+}
+.table_vznos td {
+  text-align: right;
+  border: 1px solid black;
+}
+/*
+табличка с параметрами займа
+*/
+.table_param {
+  /* text-align:right; */
+  font-size: 10pt;
+  border-collapse: collapse;
+  /*border: 10px solid #000;*/
+}
+.table_param th,
+td {
+  /* text-align:right; */
+  border: 1px solid black;
+}
+.table_payment_footer {
+  text-align: right;
+}
+TABLE {
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+.contenttext {
+  text-align: justify;
+  text-indent: 20px;
+}
+H3 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.diverror {
+  background-color: yellow; /* Цвет фона */
+  font-weight: bold;
+}
+
+SMALL {
+  font-size: 9pt;
+}
+
+/*для тех элементов, которые не надо выводить на печать*/
+.noprint {
+  border: 4px double black;
+}
+@media print {
+  .noprint {
+    display: none;
+    border: 4px double black;
+  }
+}

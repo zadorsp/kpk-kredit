@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Расчет займа</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+		<script src="js/programs.js" type="text/javascript"></script>
+		<script src="js/calculation.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="noprint">
+				<center><a href="../">Вернуться на сайт</a></center>
+			</div>
+			<div id="contaner_logo">
+				<p>
+					<!--<a href="http://kpk-kredit.16mb.com">-->
+						<a href="../">
+					<img id="logo" src="img/risunok2.jpg" name="logo" width="84" height="83" />
+					</a>
+					<!--</a>-->
+				</p>
+
+				<p class="logotext">
+					<strong>
+						КРЕДИТНЫЙ ПОТРЕБИТЕЛЬСКИЙ КООПЕРАТИВ
+						<br />
+						"СОЮЗ БАНКОВСКИХ СЛУЖАЩИХ"
+					</strong>
+				</p>
+				<p></p>
+			</div>
+
+			<div></div>
+			<div>
+				<div class="contentleft">
+					<div>
+						<p align="center"><strong>Параметры займа</strong></p>
+						<table class="table_param" width="100%" border="1">
+							<tbody>
+								<tr>
+									<td>Программа</td>
+									<td>
+										<select name="select_progr" id="select_progr" onchange="actionChangeSelect()" width="100%">
+											<option value="0">Пенсионный</option>
+											<option value="1">Неотложные нужды</option>
+											<option value="2">Рефинансирование</option>
+											<option value="3">Социальный</option>
+											<option value="4">Праздничный</option>
+											<option value="5">Обучение в ВУЗе и колледже</option>
+											<option value="6">Отдохни с комфортом</option>
+											<option value="7">Уютный дом</option>
+											<option value="8">Свадебный</option>
+											<option value="9">На лечение и стоматологию</option>
+											<option value="10">Последний звонок</option>
+											<option value="11">Ремонитируем авто</option>
+											<option value="12">Покупаем авто</option>
+											<option value="13">Моя семья</option>
+											<option value="14">Личное подсобное хозяйство</option>
+											<option value="15">Газификация</option>
+											<option value="16">Заём для осуществления крупных покупок и инвестиционных целей</option>
+											<option value="17">Весенне-полевые работы</option>
+											<option value="18">Новогодний - для бизнеса</option>
+											<option value="19">Заём доверительный, до зарплаты и пенсии</option>
+											<option value="20">Доверительный плюс</option>
+											<option value="21">Под ёлку внуку в Новый год</option>
+											<option value="22">От мамы и папы в Новый год</option>
+											<option value="23">Подари любимой Новый год</option>
+											<option value="24">Собираем детей в школу</option>
+											<option value="25">Подарочный</option>
+											<option value="26">Надежный</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Сумма</td>
+									<td>
+										<input
+											id="tfsumma"
+											type="number"
+											maxlength="10"
+											name="tfsumma"
+											value="30000"
+											max="9999999999"
+											step="1000"
+											onkeyup="actionChangeNastroiki()"
+											onchange="actionChangeNastroiki()"
+										/>
+									</td>
+								</tr>
+								<tr>
+									<td>Срок</td>
+									<td>
+										<input
+											id="tfsrok"
+											type="number"
+											name="tfsrok"
+											maxlength="2"
+											max="99"
+											value="12"
+											onkeyup="actionChangeNastroiki()"
+											onchange="actionChangeNastroiki()"
+										/>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div align="center">
+							<small>Примерный график ежемесячных платежей</small>
+							<br />
+							<table class="table_payment" width="100%" border="1">
+								<tbody>
+									<tr class="calc_head" id="table_payment">
+										<th scope="col">Месяц</th>
+										<th scope="col">Остаток займа, руб.</th>
+										<th scope="col">Погашение займа в месяц, руб.</th>
+										<th scope="col">Сумма процентов, руб.</th>
+										<th scope="col">Всего к оплате в месяц, руб.</th>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">1</th>
+										<td>30000.00</td>
+										<td>2500.00</td>
+										<td>1026.00</td>
+										<td>3526.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">2</th>
+										<td>27500.00</td>
+										<td>2500.00</td>
+										<td>940.50</td>
+										<td>3440.50</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">3</th>
+										<td>25000.00</td>
+										<td>2500.00</td>
+										<td>855.00</td>
+										<td>3355.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">4</th>
+										<td>22500.00</td>
+										<td>2500.00</td>
+										<td>769.50</td>
+										<td>3269.50</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">5</th>
+										<td>20000.00</td>
+										<td>2500.00</td>
+										<td>684.00</td>
+										<td>3184.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">6</th>
+										<td>17500.00</td>
+										<td>2500.00</td>
+										<td>598.50</td>
+										<td>3098.50</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">7</th>
+										<td>15000.00</td>
+										<td>2500.00</td>
+										<td>513.00</td>
+										<td>3013.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">8</th>
+										<td>12500.00</td>
+										<td>2500.00</td>
+										<td>427.50</td>
+										<td>2927.50</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">9</th>
+										<td>10000.00</td>
+										<td>2500.00</td>
+										<td>342.00</td>
+										<td>2842.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">10</th>
+										<td>7500.00</td>
+										<td>2500.00</td>
+										<td>256.50</td>
+										<td>2756.50</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">11</th>
+										<td>5000.00</td>
+										<td>2500.00</td>
+										<td>171.00</td>
+										<td>2671.00</td>
+									</tr>
+									<tr class="calc_row_1">
+										<th class="row">12</th>
+										<td>2500.00</td>
+										<td>2500.00</td>
+										<td>85.50</td>
+										<td>2585.50</td>
+									</tr>
+									<tr class="table_payment_footer">
+										<th colspan="2">Итого за 12 мес.</th>
+										<th scope="col">30000.00</th>
+										<th scope="col">6669.00</th>
+										<th scope="col">36669.00</th>
+									</tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="table_payment_footer"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_1"></tr>
+									<tr class="table_payment_footer"></tr>
+									<!--
+
+класс calc_row_1 являеся нумератором для строк
+
+-->
+									<tr class="calc_row_1"></tr>
+									<tr class="calc_row_2"></tr>
+
+									<tr class="table_payment_footer"></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="contenseparate">
+					<!--- разделитель колонок (что бы бл отступ -->
+					<p>&nbsp;</p>
+				</div>
+				<div class="contentright">
+					<!--- див с табличками взносов -->
+					<div>
+						<h3>при получении займа вам необходимо оплатить:</h3>
+						<table class="table_payment" width="100%" border="1">
+							<tbody>
+								<tr class="calc_head">
+									<th scope="col">Платеж</th>
+									<th scope="col">Сумма</th>
+								</tr>
+
+								<tr id="tr_vznos_paevoy" style="display: table-row;">
+									<td><div align="left">Паевой (возвратный)</div></td>
+									<td>
+										<div align="center">
+											<blockquote><p>2000</p></blockquote>
+										</div>
+									</td>
+								</tr>
+
+								<tr id="tr_vznos_ezegodn" style="display: table-row;">
+									<td><div align="left">Ежегодный взнос</div></td>
+									<td><div align="center">300</div></td>
+								</tr>
+
+								<tr>
+									<td><div align="left">Членский взнос</div></td>
+									<td><div id="vznos_strah1" align="center">150</div></td>
+								</tr>
+								<tr id="tr_vznos_ezegodn_itog" style="display: table-row;">
+									<td><div align="left">Итого взносов:</div></td>
+									<td><div id="vznosi_itog1" align="center">2450</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--- див с табличками взносов конец-->
+
+					<!--- див с описанием паевого взноса-->
+					<div>
+						<div id="tr_vznos_pro_vznosi" class="contenttext" style="display: block;">
+							<!-- про паевой рассказ-->
+							<p>&nbsp;</p>
+							<p>
+								Паевой взнос, в сумме 2000 рублей, возвратный. По окончании выплаты займа, пайщик может выйти из состава
+								пайщиков, и получить свой паевой взнос. Действующие пайщики при получении очередного займа, оплачивают
+								только страховой взнос в размере 0,5% от получаемой суммы.
+							</p>
+							<p>
+								Например: Если после выплаты этого займа Вы остаетесь в составе пайщиков, то при получении следующего
+								займа, в размере
+								<span id="summa_zayma">30000</span>
+								руб., Вы будете оплачивать не
+								<span id="vznosi_itog2">2450</span>
+								рублей, а всего лишь
+								<span id="vznos_strah2">150</span>
+								рублей
+							</p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<!--- див с описанием паевого взноса конец-->
+
+					<!--- див с описанием, когда нужен залог -->
+					<div>
+						<div class="contenttext" style="display: block;">
+							<!-- про паевой рассказ-->
+							<p>&nbsp;</p>
+							<p>Займы предоставляются без обеспечения:</p>
+							<p>- пенсионерам в сумме до 100000;</p>
+							<p>- работающим пенсионерам в сумме до 150000;</p>
+							<p>- работникам бюджетных организаций в сумме до 150000;</p>
+							<p>
+								- работникам предприятий и организаций нефтегазовой промышленности, электро и тепло снабжения, связи и
+								телекоммуникаций в сумме до 200000;
+							</p>
+							<p>
+								- работникам иных предприятий, имеющих положительную кредитную историю по данным БКИ, в сумме до 75000;
+							</p>
+							<!-- <p>- иным лицам, имеющим постоянный подтвержденный доход, в сумме до 50000.</p> -->
+							<p>&nbsp;</p>
+						</div>
+					</div>
+
+					<!--- див с описанием, когда нужен залог конец -->
+
+					<!--- див с описанием кредитной программы-->
+					<!--- сейчас просто скроем, потом надо будет удалить-->
+					<div style="display: none;">
+						<p>&nbsp;</p>
+						<h3>
+							Oсобенности кредитной программы
+							<span class="tr_name_kr_prog"></span>
+						</h3>
+
+						<!--макс сума-->
+						<div class="contenttext">
+							Максимальная сумма:
+							<span class="tr_komm_max_summ">200000</span>
+							руб.
+						</div>
+						<!--макс срок-->
+						<div class="contenttext">
+							Максимальный срок:
+							<span class="tr_komm_max_srok">24</span>
+							мес.
+						</div>
+						<!--погашение-->
+						<div class="contenttext">
+							<!--Погашение займа: <span class="tr_komm_pogash">ежемесячно</span>.-->
+						</div>
+						<!---->
+
+						<!--комментарий-->
+						<div class="contenttext">
+							Прочие условия:
+							<span class="tr_komm_kr_prog">
+								выдается для перекредитовки кабальных кредитов. До 100000 руб. - 1 поручитель. От 100000 руб. - 2
+								поручителя или 1 поручитель + залог. Пенсионерам до 50000 рублей без поручителя.
+							</span>
+						</div>
+
+						<div class="contenttext">
+							<span>
+								<small>
+									Информация актуальна по состоянию на 11.11.2016. Для получения актуальной инфрмации, обратитесь в один
+									из офисов кооператива.
+								</small>
+							</span>
+						</div>
+
+						<p>&nbsp;</p>
+					</div>
+					<!---див с описанием кредитной программы конец-->
+				</div>
+				<!---тут начинается подвал -->
+				<p>&nbsp;</p>
+				<div width="100%" style="clear: both;">
+					<div class="contentleft">
+						<div>
+							<h3>Что нужно для оформления?</h3>
+							<p><strong>Для физ лица:</strong></p>
+							<p>- Паспорт, СНИЛС, ИНН;</p>
+							<p>- Справка о доходах за последние 3 месяца;</p>
+							<p>
+								- Последняя квитанция об оплате коммунальных платежей
+								<strong>(только для заемщика)</strong>
+							</p>
+							<p>&nbsp;</p>
+							<p><strong>Для ИП:</strong></p>
+							<p>- Паспорт, СНИЛС, ИНН;</p>
+							<p>- ОГРН, налоговая декларация и квитанции об уплате налогов);</p>
+							<p>&nbsp;</p>
+						</div>
+
+						<div>
+							<h3>Режим работы:</h3>
+							<div align="center">
+								<p>
+									Понедельник-Пятница с 8-30 до 17-30,
+									<br />
+									перерыв с 13-00 до 14-00,
+									<br />
+									суббота с 09-00 до 13-00
+								</p>
+								<p>воскресенье – выходной</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+					<div class="contenseparate">
+						<!--- разделитель колонок (что бы бл отступ -->
+						<p>&nbsp;</p>
+					</div>
+					<div class="contentright">
+						<div>
+							<h3>Актуальную информацию вы можете узнать по телефону или в офисе кооператива:</h3>
+							<p>&nbsp;</p>
+							<p><img src="./img/proezd.jpg" alt="схема проезда к офису" width="314" height="253" /></p>
+							<p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--тут то, что не должно выводится на печать-->
+
+			<div width="100%" style="clear: both;">
+				<div class="noprint">
+					<center>
+						<h3>настройки расчета (данный блок на печать выводиться не будет)</h3>
+						<div class="diverror"></div>
+						<div>
+							<!--настройки-->
+							<!--выводить ли итоговую сумму-->
+							сжать график
+							<input type="checkbox" name="print_podval" id="print_podval" onchange="actionChangeNastroiki()" />
+
+							<!-- вид погашения (Аннуитентно, ежемесячно, в конце срока  
+			type_pogash: 1, тип погашения (0- в конце срока, 1- ежемес, дифференцированная система, 2 - ежемес. аннуитет)-->
+							| погашение
+							<select name="select_type_pogash" id="select_type_pogash" onchange="actionChangeNastroiki()" width="100%">
+								<option value="0">В конце срока</option>
+								<option value="1">Ежемесячно</option>
+								<option value="2">Аннуитентно</option>
+							</select>
+							|
+							<!-- коэффициент -->
+							коэффициент
+							<input
+								id="text_koefficient"
+								type="text"
+								name="text_koefficient"
+								value="3.25"
+								size="3"
+								onkeyup="actionChangeNastroiki()"
+							/>
+						</div>
+					</center>
+				</div>
+
+				<!--закрываем главный див-->
+			</div>
+		</div>
+	</body>
+</html>
